@@ -1,0 +1,28 @@
+[package]
+name = "pftp"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.83"
+async-recursion = "1.1.1"
+async-std = "1.12.0"
+async-trait = "0.1.80"
+dotenvy = "0.15.7"
+russh = "0.43.0"
+russh-keys = "0.43.0"
+russh-sftp = { git = "https://github.com/AspectUnk/russh-sftp.git", rev = "ee4afad21cbb4a8fb54357bba66198b8634a46e2" }
+serde = { version = "1.0.201", features = ["derive"] }
+tokio = { version = "1.37.0", features = ["full"] }
+toml = "0.8.12"
+# logging
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.7", features = [
+    "fmt",
+    "env-filter",
+    "local-time",
+    "time",
+] }
+validator = { version = "0.18.1", features = ["derive"] }

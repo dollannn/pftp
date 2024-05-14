@@ -1,0 +1,17 @@
+[input]
+# The directory where the input files are stored, in this case in the same directory as the config file
+input_dir = "input"
+# The output directory for the files on the remote host
+default_output_dir = "output"
+
+[hosts]
+example-host-1 = "sftp://s1.example.com"
+
+[server_groups]
+test = [10, 11]
+test-group-2 = [1, 10]
+
+[servers]
+1 = { name = "Dev server", host = "example-host-1", username = "root" }
+10 = { name = "Game server", host = "example-host-1", username = "test-user" }
+11 = { name = "Another Game Server", host = "example-host-1", username = "another-user" }
