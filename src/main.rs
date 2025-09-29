@@ -94,8 +94,8 @@ async fn main() {
                 }
                 None => {
                     error!(
-                        "Failed to connect to server. Host: {} ID: {}",
-                        server_info.host, server_info.name
+                        "Failed to connect to server. Host: {} ID: {}. Debug info: username: {}, input_dir: {}, default_output_dir: {}",
+                        server_info.host, server_info.name, server_info.username, input_dir, default_output_dir
                     );
                 }
             }
